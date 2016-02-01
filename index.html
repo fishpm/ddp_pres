@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Visualizing adjusted linear regression</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Visualizing adjusted linear regression">
+  <meta name="author" content="Patrick Fisher">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Visualizing adjusted linear regression</h1>
+    <h2>A shiny app</h2>
+    <p>Patrick Fisher<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Linear regression</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Ordinary least squares linear (OLS) regression is a commonly used statistical analysis approach for evaluating the association between two variables.</li>
+<li>The association between an outcome (Y) and a predictor (X1) can be determined alone or in the context of covariates (X2, X3, etc.).</li>
+<li>Inclusion/exclusion affects the estimated association between Y and X1, sometimes dramatically.</li>
+<li>Visualizing the effects of including/excluding covariates can be tedious.</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Visualizing adjusted linear regression: VALR</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Visualizaing adjusted linear regression (VALR) is a simple app that visualizes the association between two variables (Y, X1).</li>
+<li>VALR allows the user to easily add or remove additional predictors from the model and re-fit the model.</li>
+<li>Each time the model is re-fit, the plot updates and reports the estimated association between the selected predictor (X1) and the outcome (Y).</li>
+<li>There are three parameters to be set:
+
+<ul>
+<li>&quot;Brain region&quot; - the outcome parameter</li>
+<li>&quot;Predictors&quot; - the predictors in the model</li>
+<li>&quot;Predictor to plot&quot; - the predictor to plot</li>
+</ul></li>
+<li>Now we will walk through an example but the app can be found here
+
+<ul>
+<li>The app can be found here: <a href="https://fishpm.shinyapps.io/project/">https://fishpm.shinyapps.io/project/</a></li>
+</ul></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>VALR example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li><p>In the current example we are trying to predict a measure of the serotonin system in a brain area called the caudate.</p></li>
+<li><p>We will first evaluate how well age predicts caudate.</p></li>
+<li><p>We will then evluate how well age predicts caudate with an additional covariate (memory performance)</p></li>
+<li><p>VALR provides an app for evaluating this effect.</p></li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>VALR example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Here we predict a measure in a brain area called the caudate with age.</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>VALR example</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>Note the minor change when adding memory performance as a covariate.</li>
+</ul>
+
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Linear regression'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Visualizing adjusted linear regression: VALR'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='VALR example'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='VALR example'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='VALR example'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
