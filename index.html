@@ -49,7 +49,7 @@
     <ol>
 <li>Ordinary least squares linear (OLS) regression is a commonly used statistical analysis approach for evaluating the association between two variables.</li>
 <li>The association between an outcome (Y) and a predictor (X1) can be determined alone or in the context of covariates (X2, X3, etc.).</li>
-<li>Inclusion/exclusion affects the estimated association between Y and X1, sometimes dramatically.</li>
+<li>Inclusion/exclusion of covarites affects the estimated association between Y and X1, sometimes substantially.</li>
 <li>Visualizing the effects of including/excluding covariates can be tedious.</li>
 </ol>
 
@@ -90,9 +90,17 @@
   </hgroup>
   <article data-timings="">
     <ol>
-<li><p>In the current example we are trying to predict a measure of the serotonin system in a brain area called the caudate.</p></li>
+<li>In the current example we are trying to predict a measure related to serotonin levels in a brain area called the caudate.</li>
+</ol>
+
+<pre><code class="r">require(lava)
+dataset(serotonin, package = &#39;lava&#39;)
+serotonin$cau
+</code></pre>
+
+<ol>
 <li><p>We will first evaluate how well age predicts caudate.</p></li>
-<li><p>We will then evluate how well age predicts caudate with an additional covariate (memory performance)</p></li>
+<li><p>We will then evaluate how well age predicts caudate with an additional covariate (memory performance).</p></li>
 <li><p>VALR provides an app for evaluating this effect.</p></li>
 </ol>
 
@@ -106,10 +114,10 @@
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Here we predict a measure in a brain area called the caudate with age.</li>
+<li>Here we predict serotonin levels in the caudate with age.</li>
 </ul>
 
-<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
 
   </article>
   <!-- Presenter Notes -->
@@ -121,10 +129,10 @@
   </hgroup>
   <article data-timings="">
     <ul>
-<li>Note the minor change when adding memory performance as a covariate.</li>
+<li>Note the change when adding memory performance as a covariate.</li>
 </ul>
 
-<p><img src="assets/fig/unnamed-chunk-2-1.png" alt="plot of chunk unnamed-chunk-2"> </p>
+<p><img src="assets/fig/unnamed-chunk-3-1.png" alt="plot of chunk unnamed-chunk-3"> </p>
 
   </article>
   <!-- Presenter Notes -->

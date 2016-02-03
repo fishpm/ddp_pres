@@ -16,7 +16,7 @@ knit        : slidify::knit2slides
 
 1. Ordinary least squares linear (OLS) regression is a commonly used statistical analysis approach for evaluating the association between two variables.
 2. The association between an outcome (Y) and a predictor (X1) can be determined alone or in the context of covariates (X2, X3, etc.).
-3. Inclusion/exclusion affects the estimated association between Y and X1, sometimes dramatically.
+3. Inclusion/exclusion of covarites affects the estimated association between Y and X1, sometimes substantially.
 4. Visualizing the effects of including/excluding covariates can be tedious.
 
 --- .class #id 
@@ -37,11 +37,17 @@ knit        : slidify::knit2slides
 
 ## VALR example
 
-1. In the current example we are trying to predict a measure of the serotonin system in a brain area called the caudate.
+1. In the current example we are trying to predict a measure related to serotonin levels in a brain area called the caudate.
+
+```r
+require(lava)
+dataset(serotonin, package = 'lava')
+serotonin$cau
+```
 
 2. We will first evaluate how well age predicts caudate.
 
-3. We will then evluate how well age predicts caudate with an additional covariate (memory performance)
+3. We will then evaluate how well age predicts caudate with an additional covariate (memory performance).
 
 4. VALR provides an app for evaluating this effect.
 
@@ -49,14 +55,15 @@ knit        : slidify::knit2slides
 
 ## VALR example
 
-* Here we predict a measure in a brain area called the caudate with age.
+* Here we predict serotonin levels in the caudate with age.
 
-![plot of chunk unnamed-chunk-1](assets/fig/unnamed-chunk-1-1.png) 
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
 
 --- .class #id
 
 ## VALR example
 
-* Note the minor change when adding memory performance as a covariate.
+* Note the change when adding memory performance as a covariate.
 
-![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
+![plot of chunk unnamed-chunk-3](assets/fig/unnamed-chunk-3-1.png) 
+
